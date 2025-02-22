@@ -5,6 +5,6 @@ Ce projet de monitoring consiste à surveiller :
   -> Monitorer les procesus encours d'utilisation 
   -> L'envoie de mail à l'administrateur
 
-  NB : Ne surtout pas oublier d'automatiser toutes ces avec CRON 
+  NB : Ne surtout pas oublier de planifier toutes ces avec CRON 
 
-Nous avons gérer chaque ta^che dans un seul fichier puis fédérer l'ensemble des fichiers dans un seul
+Nous avons gérer chaque tâche dans un seul fichier puis fédérer l'ensemble des fichiers dans un seul
