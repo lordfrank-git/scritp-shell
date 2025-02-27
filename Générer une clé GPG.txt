@@ -1,0 +1,45 @@
+# ===========================================
+Génération et utilisation de la clé GPG
+# ===========================================
+
+
+1. Générer une clé GPG
+	Ouvre un terminal et tape :
+	gpg --full-generate-key
+
+ Étapes de création :
+
+Type de clé : Sélectionne (1) RSA and RSA.
+Taille de la clé : Entre 4096 (plus sécurisé).
+Durée de validité : Appuie sur Entrée pour une clé sans expiration.
+Nom : Entre ton nom (ex. "lord").
+E-mail : Entre une adresse e-mail valide.
+Mot de passe : Choisis un mot de passe sécurisé.
+Après validation, la clé est générée et son identifiant est affiché (ex. ABC1234567890DEF). Note cet identifiant.
+
+2. Vérifier la clé GPG
+
+	Liste tes clés pour récupérer l’ID :
+	gpg --list-keys
+
+ Résultat attendu :
+.gnupg/pubring.kbx
+------------------------------
+pub   rsa3072 2025-02-24 [SC]
+      85FE66D454509F413347E87D8A74CED79EA2A85E
+uid          [  ultime ] lord (Génération de la clé gpg.) <lord@gmail.com>
+sub   rsa3072 2025-02-24 [E]
+
+3. Chiffrer un fichier avec GPG
+
+	Utilisation de la clé pour chiffrer un fichier :
+	gpg --encrypt --recipient "ABC1234567890DEF" --output backup.tar.gz.gpg backup.tar.gz
+
+4. Déchiffrer un fichier
+
+	Sur le même ordinateur ou après transfert :
+	gpg ))decrypt ))output bqckup:tqr:gw bqckup:tqr:gw:gpg
+
+
+	Il demandera ton mot de passe pour déchiffrer le fichier.
+
